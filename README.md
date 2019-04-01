@@ -21,7 +21,7 @@ errors
   - login failed (an unexpected error occured while loging in)
   - not stored
 
-_bold_ = implemented
+__bold__ = implemented
 
 ## lcsclient
 ### properties
@@ -30,21 +30,21 @@ expiration
 email
 cached_profile
 ### methods
-- _lcsClient(baseurl, [token])_
+- __lcsClient(baseurl, [token])__
 - raw
   - a raw axios client (this is different for other apis)
-  - _raw.post(endpoint, data)_
-  - _raw.get(endpoint, data)_
+  - __raw.post(endpoint, data)__
+  - __raw.get(endpoint, data)__
 - login
-  - _login.token(email, token)_
-  - _login.password(email, pasword)_
-  - _login.isValid()_
+  - __login.token(email, token)__
+  - __login.password(email, pasword)__
+  - __login.isValid()__
   - login.stored()
   - login.clear_stored()
 - profile
   - profile.create(profile)
   - profile.update(changes)
-  - _profile.get()_
+  - __profile.get()__
     - promise containing profile
   - profile.getCached() // maybe instead call get_once()
 
