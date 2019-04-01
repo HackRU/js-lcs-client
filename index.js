@@ -4,7 +4,8 @@ const errors = {
     login: {
         expired: "Login Expired",
         bad: "Bad Login",
-        failed: "Login Failed"
+        failed: "Login Failed",
+        notStored: "Login Not Stored"
     }
 }
 
