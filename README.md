@@ -19,8 +19,9 @@ errors
   - bad login (username or password failed)
   - login expired (you tried to do somthing that required login but you weren't)
   - login failed (an unexpected error occured while loging in)
+  - not stored
 
-*bold* = implemented
+_bold_ = implemented
 
 ## lcsclient
 ### properties
@@ -29,19 +30,21 @@ expiration
 email
 cached_profile
 ### methods
-- *lcsClient(baseurl, [token])*
+- _lcsClient(baseurl, [token])_
 - raw
   - a raw axios client (this is different for other apis)
-  - *raw.post(endpoint, data)*
-  - *raw.get(endpoint, data)*
+  - _raw.post(endpoint, data)_
+  - _raw.get(endpoint, data)_
 - login
-  - *login.token(email, token)*
-  - *login.password(email, pasword)*
-  - *login.isValid()*
+  - _login.token(email, token)_
+  - _login.password(email, pasword)_
+  - _login.isValid()_
+  - login.stored()
+  - login.clear_stored()
 - profile
   - profile.create(profile)
   - profile.update(changes)
-  - *profile.get()*
+  - _profile.get()_
     - promise containing profile
   - profile.getCached() // maybe instead call get_once()
 
