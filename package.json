@@ -11,5 +11,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "mocha": "^6.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HackRU/js-lcs-client.git"	
   }
 }
