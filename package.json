@@ -24,10 +24,10 @@
     "doc": "typedoc src/ --mode file --out docs",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"test/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
+    "prepare": "npm run build && npm run doc",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "version": "npm run format && npm run doc && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {

@@ -2,8 +2,7 @@
 A client for easily using lcs from javascript.
 
 ## Documentation
-Build the API documentation with `npm run doc`.
-View the resulting HTML documentation in `docs/index.html`.
+View the API documentation [here](http://hackru.github.io/js-lcs-client).
 
 ## Example Usage
 Login and print a user's profile.
@@ -25,5 +24,4 @@ console.log(profile.first_name, profile.last_name);
 - Implement more endpoints
 - Add doc comments to methods and classes
 - Auto publish to NPM
-- Docs should be published to github pages.
 - Add tests
