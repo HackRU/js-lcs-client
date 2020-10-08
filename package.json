@@ -1,20 +1,46 @@
 {
   "name": "js-lcs-client",
-  "version": "1.0.0-dev",
-  "description": "A client library for interact with lcs (a backend for hackathons)",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
+  "version": "0.1.0",
+  "description": "A client library to interact with HackRU's backend, LCS",
   "author": "HackRU",
   "license": "MIT",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "mocha": "^6.0.2"
-  },
+  "homepage": "https://github.com/HackRU/js-lcs-client/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HackRU/js-lcs-client.git"	
+    "url": "https://github.com/HackRU/js-lcs-client.git"
   },
-  "homepage": "https://github.com/HackRU/js-lcs-client/"
+  "keywords": [
+    "HackRU",
+    "LCS"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "doc": "typedoc src/ --mode file --out docs",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"test/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "jest": "^26.5.2",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.19.2",
+    "typescript": "^4.0.3"
+  }
 }
